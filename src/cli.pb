@@ -23,6 +23,7 @@ CompilerEndSelect
 If Not Library
   PrintN("Required library pnb.dll/pnb64.dll not found in directory. This program will terminate.")
   system("pause")
+  end
 EndIf
 
 If CountProgramParameters()
@@ -39,11 +40,15 @@ If Len(InString)
     File = ReadFile(#PB_Any, InString)
     String = ReadString(File, #PB_File_IgnoreEOL)
     String = PeekS(CallFunction(Library, "EvalString", @String))
-    PrintN(String)
+    If Len(String)
+      PrintN(String)
+    EndIf
     End
   Else
     String = PeekS(CallFunction(Library, "EvalString", @InString))
-    PrintN(String)
+    If Len(String)
+      PrintN(String)
+    EndIf
     End
   EndIf
 Else
@@ -54,6 +59,8 @@ Else
       End
     EndIf
     String = PeekS(CallFunction(Library, "EvalString", @String))
-    PrintN(String)
+    If Len(String)
+      PrintN(String)
+    EndIf
   ForEver
 EndIf
