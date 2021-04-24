@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://www.purebasic.com/namespace" version="1.0" creator="PureBasic 5.46 LTS (Windows - x86)">
+  <section name="config">
+    <options closefiles="1" openmode="0" name="PNB\cli"/>
+    <comment>Example command line interpreter for PNB.</comment>
+  </section>
+  <section name="data">
+    <explorer view="..\..\PNB2\_src\" pattern="0"/>
+    <log show="1"/>
+    <lastopen date="2021-04-24 17:23" user="Dino" host="HUSKLET"/>
+  </section>
+  <section name="files">
+    <file name="cli.pb">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+"/>
+      <fingerprint md5="1843634ceb16d61082e1f8d00dae32c5"/>
+    </file>
+  </section>
+  <section name="targets">
+    <target name="EXEw86" enabled="1" default="1">
+      <inputfile value="cli.pb"/>
+      <outputfile value="..\cli.exe"/>
+      <compiler version="PureBasic 5.46 LTS (Windows - x86)"/>
+      <executable value="..\cli.exe"/>
+      <directory value="..\"/>
+      <options unicode="1" xpskin="1" debug="1"/>
+      <format exe="console" cpu="0"/>
+    </target>
+    <target name="EXEw64" enabled="1" default="0">
+      <inputfile value="cli.pb"/>
+      <outputfile value="..\cli64.exe"/>
+      <compiler version="PureBasic 5.46 LTS (Windows - x64)"/>
+      <executable value="..\cli64.exe"/>
+      <directory value="..\"/>
+      <options unicode="1" xpskin="1" debug="1"/>
+      <format exe="console" cpu="0"/>
+    </target>
+  </section>
+</project>
