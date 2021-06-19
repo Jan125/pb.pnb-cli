@@ -24,6 +24,6 @@
 (
     For (12) Do (
         (Set ForVar (+ (Get ForVar) 1))
-        (Debug (Fibonacci (Get ForVar)))
+        (Output (Fibonacci (Get ForVar)))
     )
 )
