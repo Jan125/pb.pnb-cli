@@ -55,7 +55,7 @@
             Get Bottles
         ) Do (
             (
-                Debug (
+                Output (
                     + (
                         Get BottlesString
                     )
@@ -63,7 +63,7 @@
                 )
             )
             (
-                Debug (
+                Output (
                     + (
                         Get BottlesString
                     )
@@ -71,7 +71,7 @@
                 )
             )
             (
-                Debug [Take one down, pass it around!]
+                Output [Take one down, pass it around!]
             )
             (
                 Set Bottles (
@@ -85,7 +85,7 @@
                 GetBottleString
             )
             (
-                Debug (
+                Output (
                     + (
                         Get BottlesString
                     )
@@ -93,7 +93,7 @@
                 )
             )
             (
-                Debug []
+                Output []
             )
         )
     )
