@@ -8,12 +8,12 @@
   <section name="data">
     <explorer view="..\..\PNB2\_src\" pattern="0"/>
     <log show="1"/>
-    <lastopen date="2021-04-25 00:56" user="Dino" host="HUSKLET"/>
+    <lastopen date="2023-04-19 22:22" user="Dino" host="HUSKLET"/>
   </section>
   <section name="files">
     <file name="cli.pb">
       <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+"/>
-      <fingerprint md5="b2aae01c092e3684abae6dcd32c4e406"/>
+      <fingerprint md5="dd828bb6e29b737c3a5f9f9c2ac08390"/>
     </file>
   </section>
   <section name="targets">
@@ -23,7 +23,7 @@
       <compiler version="PureBasic 5.46 LTS (Windows - x86)"/>
       <executable value="..\pnbcli.exe"/>
       <directory value="..\"/>
-      <options unicode="1" xpskin="1" debug="1"/>
+      <options unicode="1" thread="1" xpskin="1" debug="1"/>
       <format exe="console" cpu="0"/>
     </target>
     <target name="EXEw64" enabled="1" default="0">
@@ -32,7 +32,7 @@
       <compiler version="PureBasic 5.46 LTS (Windows - x64)"/>
       <executable value="..\pnbcli64.exe"/>
       <directory value="..\"/>
-      <options unicode="1" xpskin="1" debug="1"/>
+      <options unicode="1" thread="1" xpskin="1" debug="1"/>
       <format exe="console" cpu="0"/>
     </target>
   </section>

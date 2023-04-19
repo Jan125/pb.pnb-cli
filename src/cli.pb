@@ -11,6 +11,10 @@ Define i.i
 Define File.i
 OpenConsole()
 
+Procedure.i Exit()
+  End
+EndProcedure
+
 CompilerSelect #PB_Compiler_Processor 
   CompilerCase #PB_Processor_x86
     Library = OpenLibrary(#PB_Any, "pnb.dll")
@@ -23,8 +27,11 @@ CompilerEndSelect
 If Not Library
   PrintN("Required library pnb.dll/pnb64.dll not found in directory. This program will terminate.")
   system("pause")
-  end
+  End
 EndIf
+
+String = "(Function (Exit) Do (Invoke None "+Str(@Exit())+"))"
+CallFunction(Library, "EvalString", @String)
 
 If CountProgramParameters()
   For i = 0 To CountProgramParameters()-1
@@ -43,6 +50,7 @@ If Len(InString)
     If Len(String)
       PrintN(String)
     EndIf
+    CloseFile(File)
     End
   Else
     String = PeekS(CallFunction(Library, "EvalString", @InString))
@@ -55,9 +63,6 @@ Else
   Repeat
     Print(">")
     String = Input()
-    If String = "Exit"
-      End
-    EndIf
     String = PeekS(CallFunction(Library, "EvalString", @String))
     If Len(String)
       PrintN(String)
